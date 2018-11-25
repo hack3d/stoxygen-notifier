@@ -1,0 +1,28 @@
+# This is for dev
+version: '3'
+services:
+  sto2-rabbitmq:
+    image: rabbitmq:3.7.8-management
+    ports:
+      - "15674:15672"
+      - "5674:5672"
+  sto2-postgres:
+    image: postgres:10.6
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: sto2-notifier
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_DB: sto2_notifier
+  sto2-adminer:
+    image: adminer:4.6.3-standalone
+    ports:
+      - "8980:8080"
+  sto2-wiremock:
+    image: rodolpheche/wiremock
+    ports:
+      - "8445:8443"
+      - "8981:8080"
+    command: --https-port 8443
+    volumes:
+      - $PWD/wiremock-docker/stubs:/home/wiremock

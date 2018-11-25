@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPathPattern": "/api/v1/user/admin/notification/severity/NORMAL"
+  },
+  "response": {
+    "status": 200,
+    "jsonBody": [{"username": "admin", "channel": "email", "receiver_address": "admin@stoxygen.de"}],
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
