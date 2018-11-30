@@ -5,7 +5,7 @@
   },
   "response": {
     "status": 200,
-    "jsonBody": [{"username": "admin", "channel": "email", "receiver_address": "admin@stoxygen.de"}],
+    "jsonBody": [{"username": "admin", "channel": "email", "receiver_address": "hack3d.dev@googlemail.com"}],
     "headers": {
       "Content-Type": "application/json"
     }
