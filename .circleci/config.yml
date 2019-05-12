@@ -111,9 +111,9 @@ jobs:
       - image: circleci/openjdk:8-jdk
       - image: circleci/postgres:10.6
         environment:
-          POSTGRES_USER: sto2-indicator
+          POSTGRES_USER: sto2-notifier
           POSTGRES_PASSWORD: 123456
-          POSTGRES_DB: sto2_indicator
+          POSTGRES_DB: sto2_notifier
       - image: rabbitmq:3.6-alpine
         ports:
           - "5672:5672"
@@ -180,9 +180,9 @@ jobs:
       - image: circleci/openjdk:8-jdk
       - image: circleci/postgres:10.6
         environment:
-          POSTGRES_USER: sto2-indicator
+          POSTGRES_USER: sto2-notifier
           POSTGRES_PASSWORD: 123456
-          POSTGRES_DB: sto2_indicator
+          POSTGRES_DB: sto2_notifier
       - image: rabbitmq:3.6-alpine
         ports:
           - "5672:5672"
